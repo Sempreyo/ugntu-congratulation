@@ -1,0 +1,82 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Single publication | Ugntu'
+		};
+
+block main
+	.single
+		.container.single__container
+			.single__col
+				.single__name Аделина Имамутдинова
+				.single__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+				a.single__share(href='#')
+					.single__share-icon
+						+icon('share')
+					span поделиться
+				.single__text.d-none-mobile 1 сентября 2017 года на торжественной линейке я, как призёр олимпиады школьников,
+					|  удостоилась чести получить из рук проректора УГНТУ по учебной работе символический студенческий билет.
+					|  С того момента началось моё погружение в удивительный мир нефтегаза. Сейчас я уже студентка 2-го курса
+					|  магистратуры горно-нефтяного факультета и очень рада, что тогда сделала такой важный шаг, поступив
+					|  в Уфимский государственный нефтяной технический университет. С первых дней студенчества я постоянно
+					|  стремлюсь к повышению своего уровня знаний, являюсь автором научных статей, призёром и победителем
+					|  конференций всероссийского и международного уровней, победителем всероссийской олимпиады
+					|  «Я – профессионал» по направлению «Нефтегазовое дело». И я очень благодарна УГНТУ за широкий выбор
+					|  направлений для развития, за все возможности, знания и навыки, которые он предоставляет! От всей души
+					|  желаю нашему вузу новых достижений и высот, процветания и движения вперед! Всем сотрудникам,
+					|  профессорско-преподавательскому составу, студентам – неиссякаемой энергии, благополучия и успехов во всем!
+				.close-btn.single__close-btn
+					+icon('close')
+			.single__col
+				.single__slider.swiper.js-slider-single
+					.swiper-wrapper
+						.single__slider-item.swiper-slide
+							img(src='images/slider/1.jpg', srcset='images/slider/1@2x.jpg 2x', alt='')
+						.single__slider-item.swiper-slide
+							img(src='images/slider/2.jpg', srcset='images/slider/2@2x.jpg 2x', alt='')
+						.single__slider-item.swiper-slide
+							img(src='images/slider/1.jpg', srcset='images/slider/1@2x.jpg 2x', alt='')
+						.single__slider-item.swiper-slide
+							img(src='images/slider/2.jpg', srcset='images/slider/2@2x.jpg 2x', alt='')
+						.single__slider-item.swiper-slide
+							img(src='images/slider/1.jpg', srcset='images/slider/1@2x.jpg 2x', alt='')
+						.single__slider-item.swiper-slide
+							img(src='images/slider/2.jpg', srcset='images/slider/2@2x.jpg 2x', alt='')
+						.single__slider-item.swiper-slide
+							img(src='images/slider/1.jpg', srcset='images/slider/1@2x.jpg 2x', alt='')
+						.single__slider-item.swiper-slide
+							img(src='images/slider/2.jpg', srcset='images/slider/2@2x.jpg 2x', alt='')
+					.single__slider-nav
+						+button('swiper-prev')
+						+button('swiper-next')
+				.single__subslider.swiper.js-subslider-single
+					.swiper-wrapper
+						.single__subslider-item.swiper-slide
+							img(src='images/slider/1.jpg', srcset='images/slider/1@2x.jpg 2x', alt='')
+						.single__subslider-item.swiper-slide
+							img(src='images/slider/2.jpg', srcset='images/slider/2@2x.jpg 2x', alt='')
+						.single__subslider-item.swiper-slide
+							img(src='images/slider/1.jpg', srcset='images/slider/1@2x.jpg 2x', alt='')
+						.single__subslider-item.swiper-slide
+							img(src='images/slider/2.jpg', srcset='images/slider/2@2x.jpg 2x', alt='')
+						.single__subslider-item.swiper-slide
+							img(src='images/slider/1.jpg', srcset='images/slider/1@2x.jpg 2x', alt='')
+						.single__subslider-item.swiper-slide
+							img(src='images/slider/2.jpg', srcset='images/slider/2@2x.jpg 2x', alt='')
+						.single__subslider-item.swiper-slide
+							img(src='images/slider/1.jpg', srcset='images/slider/1@2x.jpg 2x', alt='')
+						.single__subslider-item.swiper-slide
+							img(src='images/slider/2.jpg', srcset='images/slider/2@2x.jpg 2x', alt='')
+				.single__text.d-none-desktop 1 сентября 2017 года на торжественной линейке я, как призёр олимпиады школьников,
+					|  удостоилась чести получить из рук проректора УГНТУ по учебной работе символический студенческий билет.
+					|  С того момента началось моё погружение в удивительный мир нефтегаза. Сейчас я уже студентка 2-го курса
+					|  магистратуры горно-нефтяного факультета и очень рада, что тогда сделала такой важный шаг, поступив
+					|  в Уфимский государственный нефтяной технический университет. С первых дней студенчества я постоянно
+					|  стремлюсь к повышению своего уровня знаний, являюсь автором научных статей, призёром и победителем
+					|  конференций всероссийского и международного уровней, победителем всероссийской олимпиады
+					|  «Я – профессионал» по направлению «Нефтегазовое дело». И я очень благодарна УГНТУ за широкий выбор
+					|  направлений для развития, за все возможности, знания и навыки, которые он предоставляет! От всей души
+					|  желаю нашему вузу новых достижений и высот, процветания и движения вперед! Всем сотрудникам,
+					|  профессорско-преподавательскому составу, студентам – неиссякаемой энергии, благополучия и успехов во всем!

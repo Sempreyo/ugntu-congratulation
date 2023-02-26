@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Homepage | Ugntu'
+		};
+	- let overlay = true;
+
+block main
+	include ../blocks/first-screen.pug
+	include ../blocks/list-block.pug
+

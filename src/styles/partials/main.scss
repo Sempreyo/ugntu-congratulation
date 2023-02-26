@@ -1,0 +1,298 @@
+body {
+	display: flex;
+	flex-direction: column;
+	min-width: 320px;
+	min-height: 100vh;
+	font-family: $mainFont;
+	font-size: 16px;
+	line-height: 20px;
+	color: $black;
+	background-color: $white;
+	margin: 0;
+	padding: 0;
+}
+
+.header--overlay + .sidebar + main > section:first-child {
+	padding-top: 85px;
+
+	@include max(xl) {
+		padding-top: 71px;
+	}
+
+	@include max(md) {
+		padding-top: 48px;
+	}
+}
+
+.header:not(.header--overlay) + .sidebar + main > *:first-child {
+	@include max(xl) {
+		padding-top: 71px;
+	}
+
+	@include max(md) {
+		padding-top: 48px;
+	}
+}
+
+.header:not(.header--overlay) + .sidebar {
+	border-bottom: 1px solid rgba($black, 0.2);
+}
+
+main {
+	flex-grow: 1;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding-left: 91px;
+
+	@include max(xl) {
+		padding-left: 0;
+	}
+}
+
+a {
+	color: $black;
+	text-decoration: none;
+}
+
+nav,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+input:focus-visible {
+	outline: none;
+}
+
+.container {
+	max-width: 1885px;
+	width: 100%;
+	padding: 0 35px;
+	margin: 0 auto;
+	box-sizing: border-box;
+
+	@include max(xl) {
+		padding: 0 24px;
+	}
+
+	@include max(md) {
+		padding: 0 15px;
+	}
+
+	&--full {
+		max-width: 100%;
+	}
+}
+
+.body-scroll-lock {
+	overflow: hidden;
+}
+
+.d-none-mobile {
+	display: block !important;
+
+	@include max(xl) {
+		display: none !important;
+	}
+}
+
+.d-none-desktop {
+	display: none !important;
+
+	@include max(xl) {
+		display: block !important;
+	}
+}
+
+.d-none-mobile-flex {
+	display: flex !important;
+
+	@include max(xl) {
+		display: none !important;
+	}
+}
+
+.d-none-desktop-flex {
+	display: none !important;
+
+	@include max(xl) {
+		display: flex !important;
+	}
+}
+
+.link-area {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
+.close-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 53px;
+	height: 53px;
+	border-radius: 50%;
+	border: 1px solid rgba($gray-1c, 0.2);
+	cursor: pointer;
+
+	@include max(md) {
+		width: 33px;
+		height: 33px;
+	}
+
+	@include hover {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+
+	svg {
+		stroke: $gray-1c;
+		width: 21px;
+		height: 12px;
+		transition: 0.3s ease;
+
+		@include max(md) {
+			width: 13px;
+			height: 7px;
+		}
+	}
+}
+
+.overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 30;
+	background-color: rgba(#011F18, 0.7);
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.3s ease;
+
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+/**
+ *  Select 2 override
+ */
+.select2-dropdown {
+	border: 0;
+	border-radius: 0;
+	top: 8px;
+}
+
+.select2-search--dropdown {
+	display: none;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.select2-results__option {
+	font-family: $mainFont;
+	font-size: 16px;
+	line-height: 20px;
+	color: $black-11;
+	text-transform: uppercase;
+
+	@include max(md) {
+		font-size: 9px;
+		line-height: 13px;
+	}
+}
+
+.select2-container--default .select2-results__option--selected {
+	background-color: transparent;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+	background-color: transparent;
+	color: $green;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__rendered::before {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.00049 7.18921L6.18968 2.00002L11.3789 7.18921' stroke='%2315A6B1' stroke-width='1.5'/%3e%3c/svg%3e ");
+}
+
+.select2-container--default .select2-selection--single {
+	text-align: right;
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+
+	@include max(md) {
+		height: 15px;
+	}
+
+	.select2-selection__rendered {
+		display: inline-block;
+		padding-left: 20px;
+		padding-right: 0;
+		font-family: $mainFont;
+		font-size: 16px;
+		line-height: 28px;
+		text-transform: uppercase;
+		color: $black-11;
+		position: relative;
+
+		@include max(md) {
+			font-size: 9px;
+			line-height: 13px;
+			padding-left: 13px;
+		}
+
+		&::before {
+			content: '';
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.3784 1.18921L6.18923 6.3784L1.00004 1.18921' stroke='%2315A6B1' stroke-width='1.5'/%3e%3c/svg%3e ");
+			background-repeat: no-repeat;
+			background-size: 12px 8px;
+			display: block;
+			width: 12px;
+			height: 8px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: unset;
+			transform: translateY(-50%);
+
+			@include max(md) {
+				background-size: 8px;
+			}
+		}
+	}
+
+	.select2-selection__arrow {
+		display: none;
+	}
+}
+
+/**
+ *  Swiper buttons
+ */
+
+.swiper-prev,
+.swiper-next {
+	background-color: rgba($black, 0.2);
+	cursor: pointer;
+
+	svg {
+		fill: $white;
+	}
+}
+
+.swiper-prev {
+	svg {
+		transform: rotate(180deg);
+	}
+}
+
+.swiper-button-disabled {
+	opacity: 0;
+}

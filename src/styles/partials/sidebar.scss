@@ -1,0 +1,113 @@
+.sidebar {
+	//display: none;
+	width: 91px;
+	height: 100vh;
+	background-color: $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+
+	@include max(xl) {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 71px;
+	}
+
+	@include max(md) {
+		height: 48px;
+	}
+
+	&__logo,
+	&__burger {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 85px;
+		border-bottom: 1px solid rgba($black, 0.2);
+
+		@include max(xl) {
+			height: 100%;
+			border-bottom: 0;
+		}
+	}
+
+	&__logo {
+		@include max(xl) {
+			width: 85px;
+		}
+
+		@include max(md) {
+			width: 60px;
+		}
+
+		svg {
+			width: 43px;
+			height: 43px;
+
+			@include max(xl) {
+				width: 35px;
+				height: 35px;
+			}
+
+			@include max(md) {
+				width: 29px;
+				height: 29px;
+			}
+		}
+	}
+
+	&__burger {
+		cursor: pointer;
+
+		@include max(xl) {
+			width: 103px;
+		}
+
+		@include max(lg) {
+			width: 134px;
+		}
+
+		@include max(md) {
+			width: 70px;
+		}
+
+		@include hover {
+			span {
+				&::before {
+					transform: translateY(2px);
+				}
+
+				&::after {
+					transform: translateY(-2px);
+				}
+			}
+		}
+
+		span {
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				width: 41px;
+				height: 3px;
+				background-color: $black-40;
+				transition: 0.3s ease;
+
+				@include max(xl) {
+					width: 55px;
+				}
+
+				@include max(md) {
+					width: 36px;
+				}
+			}
+
+			&::after {
+				margin-top: 5px;
+			}
+		}
+	}
+}

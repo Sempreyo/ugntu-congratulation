@@ -1,0 +1,21 @@
+form.form(action='', method='post')
+	.form__content
+		.form__top
+			.form__title Поздравление
+			.close-btn.form__close-btn
+				+icon('close')
+		input(type='text', name='firstname', placeholder='Имя', required)
+		input(type='text', name='firstname', placeholder='Группа', required)
+		textarea(name='comment', placeholder='Поздравление', required)
+		.form__files
+			.form__files-item
+				span
+				.form__files-item-remove
+					+icon('close')
+		label.form__download
+			input(id='file-loader', type='file')
+			span.form__download-title Перетащите файлы в эту область
+			span.form__download-button
+				+icon('upload')
+				span Выберите файл
+	button.form__submit(type='submit') отправить

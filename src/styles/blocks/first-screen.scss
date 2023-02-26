@@ -1,0 +1,163 @@
+.first-screen {
+	min-height: 100vh;
+	background-color: $green;
+	position: relative;
+	overflow: hidden;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: inherit;
+		padding-top: 30px;
+
+		@include max(xl) {
+			min-height: calc(100vh - 71px);
+			padding-top: 20px;
+		}
+
+		@include max(lg) {
+			padding-top: 30px;
+		}
+
+		@include max(md) {
+			justify-content: flex-start;
+			gap: 13px;
+			padding-top: 13px;
+		}
+	}
+
+	&__text {
+		max-width: 588px;
+		font-family: $secondFont;
+		font-size: 42px;
+		line-height: 54px;
+		color: $white;
+
+		@include max(md) {
+			max-width: 63%;
+			order: 1;
+			font-size: 14px;
+			line-height: 21px;
+		}
+
+		span {
+			color: rgba($white, 0.3);
+
+			@include max(md) {
+				color: $white;
+			}
+		}
+	}
+
+	&__title {
+		font-family: $secondFont;
+		font-size: 366px;
+		line-height: 424px;
+		letter-spacing: -0.06em;
+		text-transform: uppercase;
+		color: $white;
+		white-space: nowrap;
+		position: relative;
+		top: 100px;
+
+		@include max(xl) {
+			font-size: 171px;
+			line-height: 171px;
+			top: -171px;
+		}
+
+		@include max(md) {
+			font-size: 24px;
+			line-height: 25px;
+			letter-spacing: -0.01em;
+			color: $gray-f5;
+			white-space: unset;
+			top: 0;
+		}
+	}
+
+	&__anchor {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 328px;
+		height: 328px;
+		border-radius: 50%;
+		background-color: $green-44;
+		text-transform: uppercase;
+		text-align: center;
+		color: $white;
+		position: absolute;
+		bottom: 15.3%;
+		right: 12.7%;
+		transition: 0.3s ease;
+
+		@include hover {
+			transform: scale(0.98);
+		}
+
+		@include max(xl) {
+			width: 260px;
+			height: 260px;
+			bottom: 18%;
+			right: 5%;
+		}
+
+		@include max(lg) {
+			bottom: 14.7%;
+			right: 8.4%;
+		}
+
+		@include max(md) {
+			width: 144px;
+			height: 144px;
+			font-size: 9px;
+			line-height: 13px;
+			bottom: 15%;
+			right: 5%;
+		}
+	}
+
+	&__buttons {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 20;
+		border-top: 1px solid rgba($white, 0.2);
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50%;
+			padding: 32.5px 10px;
+			text-transform: uppercase;
+			color: $white;
+			background-color: $green;
+
+			@include max(md) {
+				font-size: 12px;
+				padding: 14px 10px;
+			}
+
+			&:first-child {
+				background-color: $green-44;
+
+				@include max(md) {
+					order: 1;
+					background-color: $green;
+				}
+			}
+
+			&:last-child {
+				background-color: $green;
+
+				@include max(md) {
+					background-color: $green-44;
+				}
+			}
+		}
+	}
+}
